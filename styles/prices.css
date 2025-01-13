@@ -1,0 +1,52 @@
+.main-prices {
+    max-width: 80%;
+    margin: 0 auto;
+    width: 600px;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.main-prices .cta-button {
+    display: flex;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.main-prices p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.prices-container {
+    margin-bottom: 20px;
+}
+
+.prices-container h2 {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 0.8em;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}

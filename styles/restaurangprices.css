@@ -1,0 +1,85 @@
+/* Container som flexar menyerna */
+.main-price-container {
+    display: flex;
+    flex-wrap: wrap; /* Flex-wrap gör att boxarna radbryts */
+    width: 90%; /* Anpassar bredden till 90% av hemsidans bredd */
+    margin: auto;
+    margin-bottom: 10px;
+    gap: 20px; /* Mellanrum mellan menyerna */
+    justify-content: space-evenly; /* Fördelar menyerna jämnt i raden */
+    z-index: 5;
+}
+
+/* Flex-behållare för alla menyer */
+.main-prices {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; /* Fyller hela main-price-container */
+    gap: 20px; /* Mellanrum mellan menyer */
+    justify-content: space-evenly; /* Justerar menyerna horisontellt */
+}
+
+/* Enskilda menyboxar */
+.prices-container {
+    flex: 1 1 calc(30% - 20px); /* Börjar med att ta upp 30% av bredden */
+    max-width: 700px; /* Högst 350px för varje meny */
+    min-width: 300px; /* Minsta bredd innan wrap sker */
+    background-color: #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    box-sizing: border-box; /* Inkluderar padding i bredd */
+    margin-top: 20px;
+    overflow: hidden; /* Förhindrar överflöd */
+}
+
+/* Huvudrubriker i varje meny */
+.prices-container h2 {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Sektioner inom varje meny */
+.menu-section {
+    margin-bottom: 20px;
+}
+
+.menu-section h3 {
+    font-size: 1.4em;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Styling för enskilda rätter */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.menu-item span {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.menu-item span:last-child {
+    font-weight: bold;
+}
+
+/* Responsiv design */
+@media screen and (max-width: 1024px) {
+    .prices-container {
+        flex: 1 1 calc(45% - 20px); /* Två kolumner vid mellanstora skärmar */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .prices-container {
+        flex: 1 1 calc(100% - 20px); /* En kolumn vid små skärmar */
+    }
+}

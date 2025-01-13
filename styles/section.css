@@ -1,0 +1,262 @@
+/* Main Container */
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /* Tillåter sektionerna att brytas till en kolumn på små skärmar */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    max-height: auto;
+    box-sizing: border-box;
+}
+
+/* Info Sections */
+.info-section {
+    flex: 0 1 49%; /* Två sektioner som tar upp 49% av bredden för att lämna plats för gap */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    aspect-ratio: 16 / 9;
+    padding: 0px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+.info-section button{
+    margin-top: 20px;
+}
+
+/* Inre bakgrund med genomskinlighet */
+.section-background {
+    background-color: rgba(61, 61, 61, 0.7);
+    padding: 20px;
+    width: 80%;
+    border-radius: 8px;
+}
+
+/* Media Query för Mindre Skärmar */
+@media (max-width: 768px) {
+    .info-section {
+        flex: 0 1 100%; /* Växlar till en kolumn där varje sektion tar full bredd */
+        height: 250px; /* Anpassa höjden efter innehållet för mobil */
+        margin-bottom: 10px;
+    }
+
+    .info-section button{
+        margin-bottom: 20px;
+    }
+    
+    .section-background {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Centrera sista sektionen om den är ensam på sista raden */
+    .main-container .info-section:last-child {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.section-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    height: 550px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Mobilanpassning */
+@media (max-width: 1024px) {
+    .section-main {
+        height: 400px; /* Dölj innehållet som standard på mindre skärmar */
+    }
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+    .section-main {
+        height: 350px; /* Dölj innehållet som standard på mindre skärmar */
+    }
+}
+
+/* Mobilanpassning */
+@media (max-width: 500px) {
+    .section-main {
+        height: 300px; /* Dölj innehållet som standard på mindre skärmar */
+    }
+}
+
+.left-section {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #ddd;
+}
+
+.left-section button {
+    width: 150px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: auto; /* Skjuter knappen till botten */
+    margin-bottom: 50px; /* Lägg till en liten marginal för avstånd från botten */
+}
+
+
+.right-section {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding: 20px;
+    transition: background-image 1s ease-in-out; /* Smooth transition mellan bilder */
+}
+
+.right-section img {
+    max-width: 100%;
+    max-height: 100%; /* Ensure the image doesn't overflow .right-section */
+    object-fit: fit; /* Ensures the image scales properly */
+}
+
+.price-section {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    padding: 20px;
+    transition: background-image 1s ease-in-out; /* Smooth transition mellan bilder */
+}
+
+.price-section img {
+    max-width: 100%;
+    max-height: 100%; /* Ensure the image doesn't overflow .right-section */
+    object-fit: fit; /* Ensures the image scales properly */
+}
+
+/* Section info */
+
+.section-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
+    gap: 10px;
+    margin-top: -49px;
+    z-index: 1000;
+}
+
+.info-wrapper {
+    flex: 1;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Prevent content overflow */
+    max-width: 350px;
+    min-width: 340px;
+    z-index: 1000;
+}
+
+.main-section-header {
+    flex: 1;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom, rgba(253, 190, 87, 0.4), 
+    rgba(0, 0, 0, 0.2)), 
+    #d36217;
+    border-top: 1px solid #ccc;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.main-section-header h2 {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+.main-section-info {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ddd;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 0.9em;
+    padding: 20px;
+    margin: auto;
+}
+
+.main-section-info img {
+    width: 330px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Desktop fit */
+@media (min-width: 768px) {
+    .main-section-info {
+        display: flex; /* Dölj innehållet som standard på mindre skärmar */
+    }
+}
+
+/* Mobilanpassning */
+@media (max-width: 768px) {
+    .main-section-info {
+        display: none; /* Dölj innehållet som standard på mindre skärmar */
+    }
+
+    .info-wrapper {
+        max-width: 100%; /* Gör varje sektion fullbredd på mobil */
+    }
+
+    .main-section-header {
+        cursor: pointer; /* Visar att headern är klickbar */
+    }
+
+    .section-info {
+        margin-top: 10px;
+    }
+}

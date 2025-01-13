@@ -1,0 +1,393 @@
+/* bowlingmain.css */
+
+body {
+    background-color: #242424;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header-sektion */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 50px;
+    background-color: #242424;
+    color: #F6F7F8;
+    width: 100%;
+}
+
+.top-menu-container {
+    width: 100%;
+    text-align: right;
+    padding: 0 6px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.top-menu-container p {
+    margin-right: 20px;
+    margin-left: 10px;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+    .top-menu-container p {
+        display: none;
+    }
+    
+}
+
+.media-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+    .media-container {
+        display: flex;
+        justify-content: flex-start;
+        left:10px;
+        align-items: left;
+        position: absolute;
+    }
+}
+
+.media-link {
+    display: inline-block;
+}
+
+/* Specifik storlek för Facebook-ikonen */
+.facebook-icon {
+    width: 30px;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Specifik storlek för Instagram-ikonen */
+.instagram-icon {
+    width: 50px; /* Justera detta värde vid behov */
+    height: 100%; /* Justera detta värde vid behov */
+    object-fit: contain;
+}
+
+/* Styla telefonikonen */
+.material-symbols-outlined {
+    color: #d36217; /* Ändrar färgen till orange */
+    cursor: pointer; /* Visar en pekare för att indikera att den är klickbar */
+    font-size: 24px; /* Justera storlek om det behövs */
+    margin-right: 8px; /* Lägger till lite mellanrum mellan ikonen och telefonnumret */
+}
+
+.bottom-header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(253, 190, 87, 0.4), 
+    rgba(0, 0, 0, 0.2)), 
+    #d36217;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.5), 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-menu-container {
+    display: flex;
+    flex-direction: flex-end;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+.footer-menu-container {
+    display: flex;
+    flex-direction: flex-end;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px;
+    top: 11px;
+    z-index: 1000;
+}
+
+.logo-container img {
+    width: 150px;
+    height: auto;
+}
+
+.header-spacer {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Förhindra eventuell overflow */
+    z-index: 998;
+}
+
+.spacer-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/base1.jpg');
+    background-size: auto; /* För att behålla bildens proportioner */
+    background-position: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-repeat: repeat;
+    z-index: 998;
+}
+
+.spacer-wrapper h1 {
+    font-size: 3em;
+    color: #d36217;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Svart bakgrund med 70% opacitet */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.spacer-wrapper p {
+    font-size: 2em;
+    color: #d36217;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Svart bakgrund med 70% opacitet */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Stora skärmar */
+@media (min-width: 1200px) {
+    .spacer-wrapper {
+        background-size: contain; /* Anpassar till behållaren på stora skärmar */
+    }
+    .header-spacer {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .spacer-wrapper {
+        background-size: contain; /* Anpassar till behållaren på stora skärmar */
+    }
+
+    .header-spacer {
+        height: 500px;
+    }
+}
+
+/* Medelstora skärmar */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .spacer-wrapper {
+        background-size: cover; /* Täck hela behållaren på medelstora skärmar */
+    }
+}
+
+/* Mindre skärmar */
+@media (max-width: 768px) {
+    .spacer-wrapper {
+        background-size: cover;
+        background-position: center; /* Justera position för mobiler */
+    }
+
+    .header-spacer {
+        height: 500px;
+    }
+}
+
+/* Responsivitet */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        background-color: #242424;
+    }
+
+    .logo-container {
+        position: static;
+        margin-top: 10px;
+        background-color: #242424;
+    }
+}
+
+/* Mindre skärmar */
+@media (max-width: 500px) {
+    .header-spacer {
+        height: 300px;
+    }
+}
+
+/* Contact Form Popup */
+.contact-container {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.contact-container.visible {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+}
+
+.contact-container h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-container label {
+    margin: 8px 0 4px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.contact-container select, 
+.contact-container textarea,
+.contact-container input {
+    width: auto;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.contact-container button {
+    background-color: #d36217;
+    position: relative;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    z-index: 1000;
+}
+
+.contact-container button:hover {
+    background-color: #c05015;
+}
+
+.footerbowling {
+    background: linear-gradient(to bottom, rgb(36, 36, 36, 1), 
+    rgba(0, 0, 0, 1)), 
+    #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Dela upp i tre sektioner */
+    align-items: flex-start; /* Justera varje sektion från toppen */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrera innehållet */
+    z-index: 2;
+    width: 90%;
+}
+
+.footer-section {
+    flex: 1; /* Låter varje sektion ta upp lika stor plats */
+    padding: 10px;
+    text-align: left;
+    z-index: 3;
+}
+
+.footer-bottom {
+    position: absolute;
+    margin-top: 10px;
+    bottom: 10px; /* 5px från botten av footer */
+    left: 50%;
+    transform: translateX(-50%); /* Centrerar den horisontellt */
+    font-size: 0.9em;
+    color: #cccccc;
+    z-index: 4;
+}
+
+.footer-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-media-container {
+    display: flex;
+    height: 50px;
+}
+
+.footer-media-container p {
+    margin-left: 6px;
+}
+
+.phone-link:hover, .location-link:hover {
+    cursor: pointer;
+}
+
+#phone-icon, #location-icon {
+    font-size: 24px;
+    margin-right: 8px;
+    color: #d36217;
+}
+
+.phone-link, .location-link {
+    display: flex;
+    align-items: center;
+    color: #d36217;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.location-link:hover {
+    cursor: pointer;
+}

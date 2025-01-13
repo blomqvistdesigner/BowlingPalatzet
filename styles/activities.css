@@ -1,0 +1,236 @@
+.activities-header {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px; /* Topp/botten och vänster/höger padding */
+    width: fit-content; /* Gör headern lika bred som innehållet */
+    background: linear-gradient(to bottom, rgba(253, 190, 87, 0.4), rgba(0, 0, 0, 0.2)), #d36217;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    top: -10px;
+    margin: auto; /* Centrerar headern horisontellt */
+    box-shadow: inset 0 3px 5px rgba(255, 255, 255, 0.5), 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.activities-container {
+    display: flex;
+    gap: 10px; /* Mellanrum mellan länkar */
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+/* Container som håller `.booking-system` och ger avstånd från webbläsarens kanter */
+.booking-system-container {
+    padding-left: 10px; /* Avstånd från webbläsarens kanter */
+    padding-right: 10px; /* Avstånd från webbläsarens kanter */
+}
+
+/* Själva bokningssystemet */
+.booking-system {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Begränsar bredden så den inte blir för bred */
+    margin: 0 auto; /* Centrerar elementet inom sin container */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Generell padding runt om */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Säkerställer att padding ingår i bredden */
+}
+
+.booking-content {
+    display: block;
+    width: 100%;
+    padding: 20px;
+}
+
+.booking-content h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calendar {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.calendar-header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding-top: 10px;
+}
+
+.day {
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+    padding: 5px 0;
+}
+
+.date {
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.date:hover {
+    background-color: #ff9505;
+    color: #fff;
+}
+
+.date.disabled {
+    background-color: #e0e0e0;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+.date.selected {
+    background-color: #ff9505;
+    color: #fff;
+}
+
+/* För mindre skärmar, gör texten och padding lite mindre */
+@media (max-width: 600px) {
+    .date-picker {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
+
+form, .booking-content {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group {
+    width: 90%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.person-selector, .duration-selector {
+    display: flex;
+    width: 80%;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.person-btn, .duration-btn {
+    background-color: #ff9505;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.person-btn:hover, .duration-btn:hover {
+    background-color: #d36217;
+}
+
+.selected {
+    background-color: #d36217;
+    color: #fff;
+}
+
+/* Justera textstorlek på mindre skärmar */
+@media (min-width: 769px) {
+    .cta-button {
+        font-size: 0.8em; /* Lite mindre textstorlek */
+        padding: 8px 16px; /* Mindre padding för att passa textstorleken */
+    }
+}
+
+/* Justera textstorlek på mindre skärmar */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 0.8em; /* Lite mindre textstorlek */
+        padding: 8px 16px; /* Mindre padding för att passa textstorleken */
+    }
+}
+
+@media (max-width: 600px) {
+    .cta-button {
+        font-size: 0.7em; /* Ännu mindre textstorlek */
+        padding: 7px 14px; /* Anpassad padding för mindre skärmar */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        font-size: 0.6em; /* Mindre textstorlek på riktigt små skärmar */
+        padding: 6px 12px; /* Justera padding för att passa textstorleken */
+    }
+}
+
+#green-cta-button {
+    background-color: #1eff00; /* Grön färg */
+    color: white;             /* Textfärg */
+    border: none;             /* Tar bort standardkant */
+    border-radius: 5px;       /* Rundar hörnen */
+    padding: 10px 20px;       /* Ger knappens innehåll lite luft */
+    font-size: 1em;           /* Anpassar textstorleken */
+    cursor: pointer;          /* Visar att knappen är klickbar */
+    display: flex;
+    margin: auto;
+}
+
+#green-cta-button:hover {
+    background-color: #1db63e; /* Mörkare grön vid hovring */
+}

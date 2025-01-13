@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Restricted Access"
+AuthUserFile "C:/xampp/htdocs/BowlingPalatzet/.htpasswd"
+Require valid-user

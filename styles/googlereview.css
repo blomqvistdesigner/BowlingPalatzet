@@ -1,0 +1,88 @@
+/* Google reviews */
+.section-reviews {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 30px; /* Lägg till lite extra padding i botten */
+    background: #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 89%;
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .section-reviews {
+        max-width: 85%;
+    }
+}
+
+.section-reviews .cta-button {
+    margin-bottom: 20px; /* Marginal under knappen */
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .review {
+        width: 100px;
+        padding: 15px;
+    }
+    
+}
+
+.review-picture img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1500px) {
+    .review-picture img {
+        display: none;
+    }
+    
+}
+
+.review-text p {
+    font-size: 0.8em;
+    margin: 10px 0;
+    color: #555;
+    text-align: center;
+}
+
+.review-stars {
+    color: #ff8800;
+    font-size: 1.0em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobilanpassning för recensionerna */
+@media (max-width: 768px) {
+    .reviews-container {
+        gap: 10px;
+    }
+
+    .review {
+        height: auto;
+    }
+}

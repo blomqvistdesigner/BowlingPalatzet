@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyresö Bowling</title>
+    <!-- Länka CSS-fil -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="../styles/bowlingmain.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/section.css">
+    <link rel="stylesheet" href="../styles/activities.css">
+</head>
+<body>
+    <!-- Header-sektion -->
+    <header class="header-container">
+        <div class="logo-container">
+            <a href="tyreso.html">
+                <img src="../images/logo_tyreso_568x276.png" alt="Tyresö Bowling Logo">
+            </a>
+        </div>
+        <div class="top-header">
+            <div class="top-menu-container">
+                <div class="media-container">
+                    <a href="https://www.facebook.com/search/top?q=h%C3%B6gdalens%20bowlingpalatz" class="media-link" target="_blank">
+                        <img src="../images/facebook.png" alt="Facebook Logo" class="facebook-icon">
+                    </a>
+                    <a href="https://www.instagram.com/bowlingpalatzet/" class="media-link" target="_blank">
+                        <img src="../images/instagram.png" alt="Instagram Logo" class="instagram-icon">
+                    </a>
+                    <a href="tel:+4687121326" class="phone-link">
+                        <span class="material-symbols-outlined" id="phone-icon">call</span>
+                    </a>
+                    <p>08-712 13 26</p>
+                </div>  
+                <a href="aktiviteter.html" class="button-link">Scoring</a>
+                <a href="aktiviteter.html" class="button-link-booking">Boka Online</a>
+                </div>
+        </div>
+        <div class="bottom-header">
+            <div class="bottom-menu-container">
+                <a href="aktiviteter.html" class="bottom-button" id="scroll-activities">Aktiviteter</a>
+                <a href="barnkalas.html" class="bottom-button">Barnkalas</a>
+                <a href="restaurang.html" class="bottom-button">Restaurang</a>
+                <a href="prices.html" class="bottom-button">Priser</a>
+                <a href="https://www.sbhf.se/ligaservice/index.php/division/index?parentId=2881" class="bottom-button" target="_blank">Liga</a>
+            </div>
+        </div>
+    </header>
+
+    <!---<div class="header-spacer">
+        <div class="spacer-wrapper">
+            <h1>Fredag 20/12</h1>
+            <p>Julspecial</p>
+            <button class="cta-button" onclick="window.location.href='information.html'">Information</button>
+        </div>
+    </div>-->
+
+        <div class="section-main">
+            <div class="price-section">
+                <!-- Bildspelet visas här som bakgrundsbilder -->
+            </div>        
+        </div>
+
+<!-- Main Innehåll -->
+
+<div class="activities-header">
+    <div class="activities-container">
+        <button class="cta-button" onclick="showBookingSystem('Bowling')">Boka Bowling</button>
+        <button class="cta-button" onclick="showBookingSystem('Discobowling')">Boka Discobowling</button>
+        <button class="cta-button" onclick="showBookingSystem('Shuffleboard')">Boka Shuffleboard</button>
+        <button class="cta-button" onclick="showBookingSystem('Dart')">Boka Dart</button>
+    </div>
+</div>
+<div class="booking-system-container">
+    <div class="booking-system">
+        <div class="booking-content" id="Bowling-content">
+            <h3>Boka Bowling</h3>
+            <form>
+                <div class="form-group">
+                    <label for="people">Vilket datum vill du boka ?</label>
+                    <br>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="prev-month">&#9664;</button>
+                            <span class="month-year">November 2024</span>
+                            <button class="next-month">&#9654;</button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day">Må</div>
+                            <div class="day">Ti</div>
+                            <div class="day">On</div>
+                            <div class="day">To</div>
+                            <div class="day">Fr</div>
+                            <div class="day">Lö</div>
+                            <div class="day">Sö</div>
+                    
+                            <!-- Dagar i månaden, där vissa är inaktiverade för att representera dagar utanför månaden -->
+                            <button class="date disabled">1</button>
+                            <button class="date disabled">2</button>
+                            <button class="date disabled">3</button>
+                            <button class="date disabled">4</button>
+                            <button class="date disabled">5</button>
+                            <button class="date disabled">6</button>
+                            <button class="date disabled">7</button>
+                            <button class="date disabled">8</button>
+                            <button class="date disabled">9</button>
+                            <button class="date disabled">10</button>
+                            <button class="date disabled">11</button>
+                            <button class="date disabled">12</button>
+                            <button class="date disabled">13</button>
+                            <button class="date disabled">14</button>
+                            <button class="date disabled">15</button>
+                            <button class="date disabled">16</button>
+                            <button class="date">17</button>
+                            <button class="date">18</button>
+                            <button class="date">19</button>
+                            <button class="date">20</button>
+                            <button class="date">21</button>
+                            <button class="date">22</button>
+                            <button class="date">23</button>
+                            <button class="date">24</button>
+                            <button class="date">25</button>
+                            <button class="date">26</button>
+                            <button class="date">27</button>
+                            <button class="date">28</button>
+                            <button class="date">29</button>
+                            <button class="date">30</button>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="form-group">
+                    <label for="people">Antal personer:</label>
+                    <div class="person-selector">
+                        <button type="button" class="cta-button">1</button>
+                        <button type="button" class="cta-button">2</button>
+                        <button type="button" class="cta-button">3</button>
+                        <button type="button" class="cta-button">4</button>
+                        <button type="button" class="cta-button">5</button>
+                        <button type="button" class="cta-button">6</button>
+                        <button type="button" class="cta-button">7</button>
+                        <button type="button" class="cta-button">8</button>
+                        <button type="button" class="cta-button">9</button>
+                        <button type="button" class="cta-button">10</button>
+                        <!-- More buttons can be added based on max occupancy -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Tid:</label>
+                    <div class="duration-selector">
+                        <button type="button" class="cta-button">1 timme</button>
+                        <button type="button" class="cta-button">1.5 timme</button>
+                        <button type="button" class="cta-button">2 timmar</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button" id="green-cta-button">Bekräfta Bokning</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<div class="booking-system-container">
+    <div class="booking-system">
+        <div class="booking-content" id="Discobowling-content">
+            <h3>Boka Discobowling</h3>
+            <form>
+                <div class="form-group">
+                    <label for="people">Vilket datum vill du boka ?</label>
+                    <br>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="prev-month">&#9664;</button>
+                            <span class="month-year">November 2024</span>
+                            <button class="next-month">&#9654;</button>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day">Må</div>
+                            <div class="day">Ti</div>
+                            <div class="day">On</div>
+                            <div class="day">To</div>
+                            <div class="day">Fr</div>
+                            <div class="day">Lö</div>
+                            <div class="day">Sö</div>
+                    
+                            <!-- Dagar i månaden, där vissa är inaktiverade för att representera dagar utanför månaden -->
+                            <button class="date disabled">1</button>
+                            <button class="date disabled">2</button>
+                            <button class="date disabled">3</button>
+                            <button class="date disabled">4</button>
+                            <button class="date disabled">5</button>
+                            <button class="date disabled">6</button>
+                            <button class="date disabled">7</button>
+                            <button class="date disabled">8</button>
+                            <button class="date disabled">9</button>
+                            <button class="date disabled">10</button>
+                            <button class="date disabled">11</button>
+                            <button class="date disabled">12</button>
+                            <button class="date disabled">13</button>
+                            <button class="date disabled">14</button>
+                            <button class="date disabled">15</button>
+                            <button class="date disabled">16</button>
+                            <button class="date">17</button>
+                            <button class="date">18</button>
+                            <button class="date">19</button>
+                            <button class="date">20</button>
+                            <button class="date">21</button>
+                            <button class="date">22</button>
+                            <button class="date">23</button>
+                            <button class="date">24</button>
+                            <button class="date">25</button>
+                            <button class="date">26</button>
+                            <button class="date">27</button>
+                            <button class="date">28</button>
+                            <button class="date">29</button>
+                            <button class="date">30</button>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="form-group">
+                    <label for="people">Antal personer:</label>
+                    <div class="person-selector">
+                        <button type="button" class="cta-button">1</button>
+                        <button type="button" class="cta-button">2</button>
+                        <button type="button" class="cta-button">3</button>
+                        <button type="button" class="cta-button">4</button>
+                        <button type="button" class="cta-button">5</button>
+                        <button type="button" class="cta-button">6</button>
+                        <button type="button" class="cta-button">7</button>
+                        <button type="button" class="cta-button">8</button>
+                        <button type="button" class="cta-button">9</button>
+                        <button type="button" class="cta-button">10</button>
+                        <!-- More buttons can be added based on max occupancy -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Tid:</label>
+                    <div class="duration-selector">
+                        <button type="button" class="cta-button">1 timme</button>
+                        <button type="button" class="cta-button">1.5 timme</button>
+                        <button type="button" class="cta-button">2 timmar</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button" id="green-cta-button">Bekräfta Bokning</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="booking-content" id="Shuffleboard-content">
+        <h3>Boka Shuffleboard</h3>
+        <!-- Bokningsformulär här -->
+    </div>
+
+    <div class="booking-content" id="Dart-content">
+        <h3>Boka Dart</h3>
+        <!-- Bokningsformulär här -->
+    </div>
+</div>
+
+<!--- CONTACT BUTTON -->
+
+        <button class="contact-button" onclick="toggleContactForm()">Kontakta oss</button>
+
+    <!-- Kontaktformulär -->
+    <div class="contact-container" id="contactForm">
+        <h4>Kontakta oss</h4>
+        <p>Telefon: 08-712 13 26</p>
+        <p>E-post: tyreso@bowlingpalatzet.se</p>
+        <form>
+            <label for="name">För- och efternamn:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="email">E-postadress:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="issue-type">Välj typ av ärende:</label>
+            <select id="issue-type" name="issue-type">
+                <option value="review">Omdöme</option>
+                <option value="question">Fråga</option>
+                <option value="complaint">Klagomål</option>
+                <option value="other">Övrigt</option>
+            </select>
+    
+            <label for="message">Ditt meddelande:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="button" onclick="submitMessage()">Skicka</button>
+        </form>
+    </div>    
+
+    <div class="footerbowling">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="footer-media">
+                    <h4>Följ oss på:</h4>
+                    <div class="footer-media-container">
+                        <a href="https://www.facebook.com/search/top?q=h%C3%B6gdalens%20bowlingpalatz" class="media-link" target="_blank">
+                            <img src="../images/vitfacebook.png" class="facebook-icon" alt="Facebook Logo">
+                        </a>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="footer-media-container">
+                        <a href="https://www.facebook.com/search/top?q=h%C3%B6gdalens%20bowlingpalatz" class="media-link" target="_blank">
+                            <img src="../images/vitinstagram.png" class="facebook-icon" alt="Instagram Logo">
+                        </a>
+                        <p>Instagram</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Ni hittar oss:</h4>
+                <p>Tyresö Bowlingpalatz</p>
+                <p>Pluggvägen 2 (Tyresöhallen)</p>
+                <p>135 46 TYRESÖ</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pluggvägen+2,+135+46+Tyresö" target="_blank" class="location-link">
+                    <span class="material-symbols-outlined" id="location-icon">explore_nearby</span>
+                    Hitta Hit
+                </a>
+            </div>           
+            <div class="footer-section">
+                <div class="footer-menu-container">
+                    <a href="#" class="cta-button">Resultat</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Palatzet Bolldalen AB. Alla rättigheter reserverade
+        </div>
+    </div>
+
+    <!-- Länka JavaScript-fil -->
+    <script src="../script/pricemain.js"></script>
+    <script src="../script/floatingcontact.js"></script>
+    <script src="../script/sectioninfo.js"></script>
+    <script src="../script/booking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>
