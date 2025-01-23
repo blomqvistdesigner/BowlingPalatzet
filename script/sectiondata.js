@@ -5,49 +5,49 @@ const sectionsData = [
         description: "Njut av bowling i vår moderna hall.",
         backgroundImage: "../images/background.jpg",
         buttonText: "Boka Bowling",
-        buttonLink: "bowling.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Shuffleboard",
         description: "Utmana vännerna i shuffleboard.",
         backgroundImage: "../images/shuffleboard.jpg",
         buttonText: "Boka Shuffleboard",
-        buttonLink: "shuffleboard.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Biljard",
         description: "Ta en runda biljard med kompisarna.",
         backgroundImage: "../images/poolbollar.jpg",
         buttonText: "Boka Biljard",
-        buttonLink: "biljard.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Dart",
         description: "Spela dart i en trevlig miljö.",
         backgroundImage: "../images/dart.jpg",
         buttonText: "Boka Dart",
-        buttonLink: "dart.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Proshop",
         description: "Välkommen in i våran butik.",
         backgroundImage: "../images/bowlingshop.jpg",
         buttonText: "Boka Tid",
-        buttonLink: "proshop.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Barnkalas",
         description: "Vill du ha det perfekt barnkalaset? Då har du hittat rätt.",
         backgroundImage: "../images/barnkalas.jpg",
         buttonText: "Boka Barnkalas",
-        buttonLink: "barnkalas.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Restaurang",
         description: "Här hittar du vår restaurang & meny.",
         backgroundImage: "../images/restaurang.jpg",
         buttonText: "Lunch meny",
-        buttonLink: "restaurang.html"
+        buttonLink: "aktiviteter.html"
     },
     {
         title: "Liga",

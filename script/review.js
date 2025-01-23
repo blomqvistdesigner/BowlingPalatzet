@@ -27,14 +27,20 @@ const reviewsData = [
     },
     {
         name: "Anna L.",
-        picture: "../images/female3.png",
+        picture: "../images/female.jpg",
+        text: "Bästa upplevelsen! Rekommenderas starkt.",
+        stars: 3.2
+    },
+    {
+        name: "Annassss L.",
+        picture: "../images/female2.png",
         text: "Bästa upplevelsen! Rekommenderas starkt.",
         stars: 5.0
     },
     {
         name: "Annassss L.",
-        picture: "../images/female3.png",
+        picture: "../images/male2.jpg",
         text: "Bästa upplevelsen! Rekommenderas starkt.",
-        stars: 5.0
+        stars: 2.3
     }
 ];

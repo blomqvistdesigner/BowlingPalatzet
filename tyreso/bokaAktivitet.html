@@ -7,11 +7,16 @@
     <!-- Länka CSS-fil -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../styles/bowlingmain.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="../styles/bookingmain.css">
     <link rel="stylesheet" href="../styles/buttons.css">
     <link rel="stylesheet" href="../styles/section.css">
-    <link rel="stylesheet" href="../styles/restaurangprices.css">
-    <link rel="stylesheet" href="../styles/footerIndex.css">
+    <link rel="stylesheet" href="../styles/activities.css">
+    <link rel="stylesheet" href="../styles/booking.css">
+    <link rel="stylesheet" href="../styles/specialBooking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header-sektion -->
@@ -50,6 +55,38 @@
         </div>
     </header>
 
+    <div class="bookingMain">
+        <div class="bookingContainer">
+            <!-- Main View -->
+                <div class="calendarSection">
+                    <div class="bookingHeader">
+                    <h2>Vilket datum vill du boka?</h2>
+                    </div>
+                    <div id="booking-content"></div> <!-- Tom container -->
+                    <p>  Tisdagen den 14 januari
+
+                        Är ditt datum eller din tid otillgänglig?
+                        Ring oss direkt på 08-712 13 26 för mer information om tillgänglighet.
+                    </p>
+                </div>
+                <div class="bookingSection2">
+                    <h3>Vad vill du boka?</h3>
+                    <p>Förutom Bowling, Biljard & Shuffleboard erbjuder 
+                        vi även Dart. Dart är gratis vid inköp av fika eller 
+                        dylikt och tillgängligt via drop-in.</p>
+                    <div class="activities-container">
+                        <button class="cta-button" onclick="showBookingSystem('Bowling')">Bowling</button>
+                        <button class="cta-button" onclick="showBookingSystem('Biljard')">Biljard</button>
+                        <button class="cta-button" onclick="showBookingSystem('Shuffleboard')">Shuffleboard</button>
+                    </div>
+                </div>
+            <div class="bookingButtonContainer">
+                <button class="cta-button" onclick="goBack()">Tillbaka</button>
+                <button class="cta-button" onclick="goNext()">Fortsätt</button>
+            </div>
+        </div>
+    </div>    
+
     <!---<div class="header-spacer">
         <div class="spacer-wrapper">
             <h1>Fredag 20/12</h1>
@@ -58,33 +95,53 @@
         </div>
     </div>-->
 
-        <div class="section-main">
-            <div class="right-section">
-                <!-- Bildspelet visas här som bakgrundsbilder -->
+        <!--<div class="section-main">
+            <div class="price-section">
             </div>        
-        </div>
+        </div>-->
 
 <!-- Main Innehåll -->
 
-<div class="main-price-container">
-    <div class="main-prices">
-        <!-- Meny för Standard Rätter -->
-        <div class="prices-container" id="standard-ratter-container">
-            <h2>Standard Rätter</h2>
-            <!-- Meny kommer att laddas här -->
-        </div>
-        <!-- Meny för Hamburgare -->
-        <div class="prices-container" id="hamburgare-container">
-            <h2>Hamburgare</h2>
-            <!-- Meny kommer att laddas här -->
-        </div>
-        <!-- Meny för Dryck -->
-        <div class="prices-container" id="dryck-container">
-            <h2>Dryck</h2>
-            <!-- Meny kommer att laddas här -->
+<!--<div class="activities-header">
+    <div class="activities-container">
+        <button class="cta-button" onclick="showBookingSystem('Bowling')">Boka Bowling</button>
+        <button class="cta-button" onclick="showBookingSystem('Discobowling')">Boka Discobowling</button>
+        <button class="cta-button" onclick="showBookingSystem('Shuffleboard')">Boka Shuffleboard</button>
+        <button class="cta-button" onclick="showBookingSystem('Dart')">Boka Dart</button>
+    </div>
+</div>
+
+                <div class="form-group">
+                    <label for="people">Antal personer:</label>
+                    <div class="person-selector">
+                        <button type="button" class="cta-button">1</button>
+                        <button type="button" class="cta-button">2</button>
+                        <button type="button" class="cta-button">3</button>
+                        <button type="button" class="cta-button">4</button>
+                        <button type="button" class="cta-button">5</button>
+                        <button type="button" class="cta-button">6</button>
+                        <button type="button" class="cta-button">7</button>
+                        <button type="button" class="cta-button">8</button>
+                        <button type="button" class="cta-button">9</button>
+                        <button type="button" class="cta-button">10</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Tid:</label>
+                    <div class="duration-selector">
+                        <button type="button" class="cta-button">1 timme</button>
+                        <button type="button" class="cta-button">1.5 timme</button>
+                        <button type="button" class="cta-button">2 timmar</button>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button" id="green-cta-button">Bekräfta Bokning</button>
+            </form>
         </div>
     </div>
 </div>
+<br>-->
 
 <!--- CONTACT BUTTON -->
 
@@ -119,7 +176,6 @@
             <button type="button" onclick="submitMessage()">Skicka</button>
         </form>
     </div>    
-
     <div class="footerbowling">
         <div class="footer-container">
             <div class="footer-section">
@@ -161,10 +217,12 @@
     </div>
 
     <!-- Länka JavaScript-fil -->
-    <script src="../script/bowlingmain.js"></script>
+    <script src="../script/pricemain.js"></script>
     <script src="../script/floatingcontact.js"></script>
-    <script src="../script/autodirection.js"></script>
     <script src="../script/sectioninfo.js"></script>
-    <script src="../script/renderMenu.js" type="module"></script>
+    <script src="../script/booking.js"></script>
+    <script src="../script/bookingContainer.js"></script>
+    <script src="../script/calendar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>

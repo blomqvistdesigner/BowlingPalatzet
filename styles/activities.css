@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px 20px; /* Topp/botten och vänster/höger padding */
-    width: fit-content; /* Gör headern lika bred som innehållet */
+    width: auto; /* Gör headern lika bred som innehållet */
     background: linear-gradient(to bottom, rgba(253, 190, 87, 0.4), rgba(0, 0, 0, 0.2)), #d36217;
     color: #FFFFFF;
     font-size: 1.2em;
@@ -16,49 +16,22 @@
 .activities-container {
     display: flex;
     gap: 10px; /* Mellanrum mellan länkar */
-    justify-content: center;
-    align-items: center;
     font-size: 1em;
-}
-
-/* Container som håller `.booking-system` och ger avstånd från webbläsarens kanter */
-.booking-system-container {
-    padding-left: 10px; /* Avstånd från webbläsarens kanter */
-    padding-right: 10px; /* Avstånd från webbläsarens kanter */
-}
-
-/* Själva bokningssystemet */
-.booking-system {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 800px; /* Begränsar bredden så den inte blir för bred */
-    margin: 0 auto; /* Centrerar elementet inom sin container */
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 20px; /* Generell padding runt om */
-    font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Säkerställer att padding ingår i bredden */
 }
 
 .booking-content {
     display: block;
-    width: 100%;
-    padding: 20px;
+    width: 20%;
 }
 
 .booking-content h3 {
     font-size: 1.8em;
     color: #333;
-    margin-bottom: 20px;
     text-align: center;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    margin: auto;
+    margin-bottom: 2px;
 }
 
 label {
@@ -68,11 +41,9 @@ label {
 }
 
 .calendar {
-    width: 100%;
-    max-width: 300px;
-    margin: auto;
+    width: auto;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #000000;
     border-radius: 8px;
     font-family: Arial, sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -146,18 +117,14 @@ label {
 }
 
 form, .booking-content {
-    width: 100%;
+    width: 20%;
     box-sizing: border-box;
 }
 
 .form-group {
-    width: 90%;
-    margin-bottom: 15px;
+    width: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .person-selector, .duration-selector {
@@ -233,4 +200,55 @@ form, .booking-content {
 
 #green-cta-button:hover {
     background-color: #1db63e; /* Mörkare grön vid hovring */
+}
+
+#lane-selection {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.available {
+    display: flex;
+    flex-direction: column;
+    gap: 2px; /* Avstånd mellan raderna */
+    margin-left: 2px;
+}
+
+.availablecolor {
+    display: flex;
+    align-items: center; /* Vertikal centrering */
+    gap: 8px; /* Avstånd mellan färgrutan och texten */
+    margin-bottom: 6px;
+    height: 10px;
+    text-align: center;
+}
+
+.colorBar {
+    display: flex;
+    width: 40px;
+    height: 60%;
+    flex-shrink: 0; /* Förhindrar att färgrutorna krymper */
+    margin: 0;
+    margin-top: -4px;
+}
+
+.colorBar.green {
+    background-color: #1eff00; /* Grön */
+}
+
+.colorBar.yellow {
+    background-color: #ffcc00; /* Gul */
+}
+
+.colorBar.red {
+    background-color: #ff0000; /* Röd */
+}
+
+.availablecolor p {
+    margin: 0; /* Ta bort marginaler */
+    font-size: 14px; /* Justera textstorlek */
+    line-height: 1; /* Reducera påverkan av textens höjd */
+    display: flex; /* Flexibelt element för bättre anpassning */
+    align-items: center; /* Centrera texten inom flexbehållaren */
 }

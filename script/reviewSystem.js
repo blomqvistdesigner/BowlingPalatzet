@@ -41,18 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateReviews = () => {
         const screenWidth = window.innerWidth;
     
-        if (screenWidth > 1800) {
+        if (screenWidth > 1750) {
             renderReviews(7); // Visa upp till 7 recensioner för skärmar bredare än 1400px
-        } else if (screenWidth > 1700) {
+        } else if (screenWidth > 1510) {
             renderReviews(6); // Visa upp till 6 recensioner för skärmar bredare än 1200px
-        } else if (screenWidth > 1400) {
+        } else if (screenWidth > 1270) {
             renderReviews(5); // Visa upp till 5 recensioner för skärmar bredare än 992px
-        } else if (screenWidth > 1200) {
+        } else if (screenWidth > 1030) {
             renderReviews(4); // Visa upp till 4 recensioner för skärmar bredare än 768px
-        } else if (screenWidth > 1100) {
+        } else if (screenWidth > 1000) {
             renderReviews(3); // Visa upp till 3 recensioner för skärmar bredare än 0px (mobila enheter)
-        } else { (screenWidth <= 900)
-            renderReviews(2); // Visa upp till 2 recensioner för skärmar bred
         }
     };    
 

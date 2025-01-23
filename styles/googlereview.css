@@ -6,14 +6,10 @@
     background: #ddd;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 89%;
+    max-width: 100%;
     margin: 10px auto;
-}
-
-@media screen and (max-width: 768px) {
-    .section-reviews {
-        max-width: 85%;
-    }
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .section-reviews .cta-button {
@@ -24,7 +20,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .review {
@@ -40,12 +36,42 @@
     margin-bottom: 30px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .review {
         width: 100px;
         padding: 15px;
     }
     
+}
+
+/* Mobilanpassning för recensionerna */
+@media (max-width: 800px) {
+    .reviews-container {
+        gap: 10px;
+    }
+
+    .review {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .review {
+        width: 140px;
+        padding: 15px;
+    }
+    
+}
+
+/* Mobilanpassning för recensionerna */
+@media (max-width: 768px) {
+    .reviews-container {
+        gap: 10px;
+    }
+
+    .review {
+        height: auto;
+    }
 }
 
 .review-picture img {
@@ -55,7 +81,7 @@
     margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 768px) {
     .review-picture img {
         display: none;
     }
@@ -74,15 +100,4 @@
     font-size: 1.0em;
     display: flex;
     justify-content: center;
-}
-
-/* Mobilanpassning för recensionerna */
-@media (max-width: 768px) {
-    .reviews-container {
-        gap: 10px;
-    }
-
-    .review {
-        height: auto;
-    }
 }

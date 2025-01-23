@@ -4,10 +4,12 @@
     flex-wrap: wrap; /* Tillåter sektionerna att brytas till en kolumn på små skärmar */
     justify-content: space-between;
     align-items: center;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
     max-height: auto;
     box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 /* Info Sections */
@@ -43,7 +45,7 @@
 }
 
 /* Media Query för Mindre Skärmar */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .info-section {
         flex: 0 1 100%; /* Växlar till en kolumn där varje sektion tar full bredd */
         height: 250px; /* Anpassa höjden efter innehållet för mobil */
@@ -71,9 +73,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
-    height: 550px;
+    height: 500px;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -161,7 +163,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 90%;
+    max-width: 100%;
     margin: auto;
     height: auto;
     margin-bottom: 10px;
@@ -169,6 +171,8 @@
     gap: 10px;
     margin-top: -49px;
     z-index: 1000;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .info-wrapper {
@@ -197,6 +201,7 @@
     border-top: 1px solid #ccc;
     border-radius: 8px 8px 0px 0px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 
 .main-section-header h2 {
@@ -249,6 +254,7 @@
     }
 
     .info-wrapper {
+        min-width: 100%;
         max-width: 100%; /* Gör varje sektion fullbredd på mobil */
     }
 

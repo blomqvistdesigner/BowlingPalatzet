@@ -8,10 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="../styles/bowlingmain.css">
+    <link rel="stylesheet" href="../styles/bookingmain.css">
     <link rel="stylesheet" href="../styles/buttons.css">
     <link rel="stylesheet" href="../styles/section.css">
     <link rel="stylesheet" href="../styles/activities.css">
+    <link rel="stylesheet" href="../styles/booking.css">
+    <link rel="stylesheet" href="../styles/specialBooking.css">
+    <link rel="stylesheet" href="../styles/footerBooking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header-sektion -->
@@ -50,6 +56,187 @@
         </div>
     </header>
 
+    <div class="bookingMain">
+        <div class="bookingContainer">
+            <!-- Huvudvy -->
+            <div class="view" id="mainView">
+                <div class="bookingHeader">
+                    <h2>Välkommen till onlinebokningen!</h2>
+                    <p>Detta är onlinebokningen för Tyresö Bowlinghall. Här kan du smidigt boka din aktivitet eller kalas direkt via webben.</p>
+                </div>
+                <div class="bookingSection">
+                    <div class="bookingOpenTime">
+                        <h3>Öppettider:</h3>
+                        <p>MÅNDAG 11:00 - 21:00</p>
+                        <p>TISDAG 11:00 - 21:00</p>
+                        <p>ONSDAG 11:00 - 21:00</p>
+                        <p>TORSDAG 11:00 - 21:00</p>
+                        <p>FREDAG 11:00 - 22:00</p>
+                        <p>LÖRDAG 11:00 - 22:00</p>
+                        <p>SÖNDAG 11:00 - 17:00</p>
+                    </div>
+                    <div class="bookingActivitySection">
+                        <h3>Vänligen välj nedan vad du vill boka</h3>
+                        <div class="bookingActivity">
+                            <h3>Aktivitet</h3>
+                            <div class="rowContainer">
+                                <img src="/images/meriq_event.jpg" alt="Bild" class="bookingActivityImage">
+                                <div class="columnContainer">
+                                    <p>Så som bowling, biljard eller shuffleboard.</p>
+                                    <button class="cta-button" onclick="showView('activitiesView')">Boka Aktivitet</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bookingKids">
+                            <h3>Barnkalas</h3>
+                            <div class="rowContainer">
+                                <img src="/images/meriq_birthdayparty.jpg" alt="Bild" class="bookingKidsImage">
+                                <div class="columnContainer">
+                                    <p>Du kan slappna av och vi tar hand om allt!</p>
+                                    <button class="cta-button" onclick="showView('kidsView')">Boka Barnkalas</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Aktivitetsvy -->
+            <div class="view hidden" id="activitiesView">
+                <div class="bookingMain">
+                    <div class="bookingMain2">
+                        <div class="calendarSection">
+                            <h2>Vilket datum vill du boka?</h2>
+                            <div id="booking-content"></div>
+                            <p>
+                                <div class="calendar-item">
+                                    <span class="material-symbols-outlined">calendar_month</span>
+                                    <span class="calendar-text">Onsdagen den 17 januari</span>
+                                </div>
+                            <p class="calendar-note">
+                                <b>Är ditt datum eller din tid otillgänglig?</b><br><br>
+                                Ring oss direkt på <b>08-712 13 26</b> för mer information om tillgänglighet.
+                            </p>
+                            
+                        </div>
+                        <div class="bookingSection2">
+                            <h2>Vad vill du boka?</h2>
+                            <p>Förutom Bowling, Biljard & Shuffleboard erbjuder vi även Dart. Dart är gratis vid inköp av fika eller dylikt och tillgängligt via drop-in.</p>
+                            <div class="activities-container">
+                                <button class="cta-button" id="bowling-booking">Bowling</button>
+                                <button class="cta-button" id="biljard-booking">Biljard</button>
+                                <button class="cta-button" id="shuffleboard-booking">Shuffleboard</button>
+                            </div>
+                            <div class="borderWhite"></div>
+                            <h2>Hur många gäster vill du boka för?</h2>
+                            <p>Det maximala antalet spelare per bana är 5. Om din bokning är för fler personer, vänligen ring oss på 08-712 13 26 så hjälper vi er med er bokning.</p>
+                            <h2>Antal personer</h2>
+                            <div class="activities-container-amount"></div>
+                            <div class="activities-container-amount-bowling" style="display: none;">
+                                <h2>Vuxna</h2>
+                                <div class="activities-container-amount" id="Amount-Bowling-Adults"></div>
+                                <h2>Barn/Pensionärer</h2>
+                                <div class="activities-container-amount" id="Amount-Bowling-Kids"></div>
+                            </div>
+                            <div class="borderWhite"></div>
+                            <h2>Hur länge vill du boka?</h2>
+                            <p>Tyvärr kan vi inte garantera att det finns lediga banor när er tid är slut. Därför rekommenderar vi att ni redan nu bokar så mycket tid ni tror att ni behöver.</p>
+                            <div class="activities-container">
+                                <button class="cta-button" id="1Tim">1 Tim</button>
+                                <button class="cta-button" id="1,5Tim">1,5 Tim</button>
+                                <div class="popularText">Populärt</div>
+                                <button class="cta-button" id="2Tim">2 Tim</button>
+                            </div>
+                            <div class="activities-container-time" style="display: none;">
+                                <div class="activities-container-time" id="Time-Booking">
+                                    <div class="borderWhite"></div>
+                                    <h2>Vilken tid vill du boka?</h2>
+                                    <p>Färgen under priset ger dig en indikation på hur många lediga banor det finns kvar.</p>
+                                    <div class="available">
+                                        <div class="availablecolor">
+                                            <div class="colorBar green"></div>
+                                            <p>= många lediga banor</p>
+                                        </div>
+                                        <div class="availablecolor">
+                                            <div class="colorBar yellow"></div>
+                                            <p>= lediga banor</p>
+                                        </div>
+                                        <div class="availablecolor">
+                                            <div class="colorBar red"></div>
+                                            <p>= fåtal banor kvar</p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="activities-container-amount" id="Booking-Time-Section">
+                                        <!-- Tider genereras här dynamiskt -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activities-container-lanes" style="display: none;">
+                                <h2></h2> <!-- Dynamisk text för antal gäster och rekommenderade banor -->
+                                <p></p> <!-- Dynamisk text för val av banor -->
+                                <div id="lane-selection"></div>
+                                <br>
+                            </div>         
+                            <div class="borderWhite"></div>                   
+                            <div class="bookingButtonGroup">
+                            <button class="cta-button" onclick="showView('mainView')">Tillbaka</button>
+                            <button class="cta-button" onclick="goNext('activitiesViewBowling')">Fortsätt</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Barnkalasvy -->
+            <div class="view hidden" id="kidsView">
+                <h2>Boka Barnkalas</h2>
+                <p>Planera det perfekta barnkalaset hos oss!</p>
+                <button class="cta-button" onclick="showView('mainView')">Tillbaka</button>
+            </div>
+            <div class="view hidden" id="activitiesViewBowling">
+                <div class="bookingMain">
+                    <div class="laneSectionContainer">
+                            <h2>Spelarnamn</h2>
+                            <p>Här kan du ange vad spelarna heter för respektive bana. 
+                                Genom att ange namnen direkt så är allt klart för att 
+                                börja spela när ni kommer till hallen.</p>
+                            <div class="borderWhite"></div>
+                        <div class="laneSection">
+                            <div class="laneText">
+                            <h3>Har du inte alla namn?</h3>
+                            <br>
+                            <p>Har du inte alla namn så gör det ingenting, 
+                                du kan fylla i namnen på spelarna när det är dags att bowla. 
+                                Lämna bara fälten och tryck "Fortsätt".</p>
+                            </div>
+                            <div class="laneTable">
+                                <div class="header">
+                                    <div class="headerCell" id="activeLane">Bana 1</div>
+                                    <div class="headerCell" id="deactiveLane">Bana 2</div>
+                                </div>
+                                <br>
+                                <div class="laneName">
+                                    <p>Namn</p>
+                                    <form action="/action_page.php">
+                                        <input type="text" id="player1" name="fname" placeholder="Spelare 1"><br><br>                                        
+                                        <input type="text" id="player2" name="lname" placeholder="Spelare 2"><br><br>
+                                    </form>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="borderWhite"></div>
+                        <div class="bookingButtonGroup">
+                            <button class="cta-button" onclick="showView('mainView')">Tillbaka</button>
+                            <button class="cta-button" onclick="goNext('bookingLane')">Fortsätt</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!---<div class="header-spacer">
         <div class="spacer-wrapper">
             <h1>Fredag 20/12</h1>
@@ -58,212 +245,10 @@
         </div>
     </div>-->
 
-        <div class="section-main">
+        <!--<div class="section-main">
             <div class="price-section">
-                <!-- Bildspelet visas här som bakgrundsbilder -->
             </div>        
-        </div>
-
-<!-- Main Innehåll -->
-
-<div class="activities-header">
-    <div class="activities-container">
-        <button class="cta-button" onclick="showBookingSystem('Bowling')">Boka Bowling</button>
-        <button class="cta-button" onclick="showBookingSystem('Discobowling')">Boka Discobowling</button>
-        <button class="cta-button" onclick="showBookingSystem('Shuffleboard')">Boka Shuffleboard</button>
-        <button class="cta-button" onclick="showBookingSystem('Dart')">Boka Dart</button>
-    </div>
-</div>
-<div class="booking-system-container">
-    <div class="booking-system">
-        <div class="booking-content" id="Bowling-content">
-            <h3>Boka Bowling</h3>
-            <form>
-                <div class="form-group">
-                    <label for="people">Vilket datum vill du boka ?</label>
-                    <br>
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button class="prev-month">&#9664;</button>
-                            <span class="month-year">November 2024</span>
-                            <button class="next-month">&#9654;</button>
-                        </div>
-                        <div class="calendar-grid">
-                            <div class="day">Må</div>
-                            <div class="day">Ti</div>
-                            <div class="day">On</div>
-                            <div class="day">To</div>
-                            <div class="day">Fr</div>
-                            <div class="day">Lö</div>
-                            <div class="day">Sö</div>
-                    
-                            <!-- Dagar i månaden, där vissa är inaktiverade för att representera dagar utanför månaden -->
-                            <button class="date disabled">1</button>
-                            <button class="date disabled">2</button>
-                            <button class="date disabled">3</button>
-                            <button class="date disabled">4</button>
-                            <button class="date disabled">5</button>
-                            <button class="date disabled">6</button>
-                            <button class="date disabled">7</button>
-                            <button class="date disabled">8</button>
-                            <button class="date disabled">9</button>
-                            <button class="date disabled">10</button>
-                            <button class="date disabled">11</button>
-                            <button class="date disabled">12</button>
-                            <button class="date disabled">13</button>
-                            <button class="date disabled">14</button>
-                            <button class="date disabled">15</button>
-                            <button class="date disabled">16</button>
-                            <button class="date">17</button>
-                            <button class="date">18</button>
-                            <button class="date">19</button>
-                            <button class="date">20</button>
-                            <button class="date">21</button>
-                            <button class="date">22</button>
-                            <button class="date">23</button>
-                            <button class="date">24</button>
-                            <button class="date">25</button>
-                            <button class="date">26</button>
-                            <button class="date">27</button>
-                            <button class="date">28</button>
-                            <button class="date">29</button>
-                            <button class="date">30</button>
-                        </div>
-                    </div>                    
-                </div>
-
-                <div class="form-group">
-                    <label for="people">Antal personer:</label>
-                    <div class="person-selector">
-                        <button type="button" class="cta-button">1</button>
-                        <button type="button" class="cta-button">2</button>
-                        <button type="button" class="cta-button">3</button>
-                        <button type="button" class="cta-button">4</button>
-                        <button type="button" class="cta-button">5</button>
-                        <button type="button" class="cta-button">6</button>
-                        <button type="button" class="cta-button">7</button>
-                        <button type="button" class="cta-button">8</button>
-                        <button type="button" class="cta-button">9</button>
-                        <button type="button" class="cta-button">10</button>
-                        <!-- More buttons can be added based on max occupancy -->
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="duration">Tid:</label>
-                    <div class="duration-selector">
-                        <button type="button" class="cta-button">1 timme</button>
-                        <button type="button" class="cta-button">1.5 timme</button>
-                        <button type="button" class="cta-button">2 timmar</button>
-                    </div>
-                </div>
-
-                <button type="submit" class="cta-button" id="green-cta-button">Bekräfta Bokning</button>
-            </form>
-        </div>
-    </div>
-</div>
-<br>
-<div class="booking-system-container">
-    <div class="booking-system">
-        <div class="booking-content" id="Discobowling-content">
-            <h3>Boka Discobowling</h3>
-            <form>
-                <div class="form-group">
-                    <label for="people">Vilket datum vill du boka ?</label>
-                    <br>
-                    <div class="calendar">
-                        <div class="calendar-header">
-                            <button class="prev-month">&#9664;</button>
-                            <span class="month-year">November 2024</span>
-                            <button class="next-month">&#9654;</button>
-                        </div>
-                        <div class="calendar-grid">
-                            <div class="day">Må</div>
-                            <div class="day">Ti</div>
-                            <div class="day">On</div>
-                            <div class="day">To</div>
-                            <div class="day">Fr</div>
-                            <div class="day">Lö</div>
-                            <div class="day">Sö</div>
-                    
-                            <!-- Dagar i månaden, där vissa är inaktiverade för att representera dagar utanför månaden -->
-                            <button class="date disabled">1</button>
-                            <button class="date disabled">2</button>
-                            <button class="date disabled">3</button>
-                            <button class="date disabled">4</button>
-                            <button class="date disabled">5</button>
-                            <button class="date disabled">6</button>
-                            <button class="date disabled">7</button>
-                            <button class="date disabled">8</button>
-                            <button class="date disabled">9</button>
-                            <button class="date disabled">10</button>
-                            <button class="date disabled">11</button>
-                            <button class="date disabled">12</button>
-                            <button class="date disabled">13</button>
-                            <button class="date disabled">14</button>
-                            <button class="date disabled">15</button>
-                            <button class="date disabled">16</button>
-                            <button class="date">17</button>
-                            <button class="date">18</button>
-                            <button class="date">19</button>
-                            <button class="date">20</button>
-                            <button class="date">21</button>
-                            <button class="date">22</button>
-                            <button class="date">23</button>
-                            <button class="date">24</button>
-                            <button class="date">25</button>
-                            <button class="date">26</button>
-                            <button class="date">27</button>
-                            <button class="date">28</button>
-                            <button class="date">29</button>
-                            <button class="date">30</button>
-                        </div>
-                    </div>                    
-                </div>
-
-                <div class="form-group">
-                    <label for="people">Antal personer:</label>
-                    <div class="person-selector">
-                        <button type="button" class="cta-button">1</button>
-                        <button type="button" class="cta-button">2</button>
-                        <button type="button" class="cta-button">3</button>
-                        <button type="button" class="cta-button">4</button>
-                        <button type="button" class="cta-button">5</button>
-                        <button type="button" class="cta-button">6</button>
-                        <button type="button" class="cta-button">7</button>
-                        <button type="button" class="cta-button">8</button>
-                        <button type="button" class="cta-button">9</button>
-                        <button type="button" class="cta-button">10</button>
-                        <!-- More buttons can be added based on max occupancy -->
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="duration">Tid:</label>
-                    <div class="duration-selector">
-                        <button type="button" class="cta-button">1 timme</button>
-                        <button type="button" class="cta-button">1.5 timme</button>
-                        <button type="button" class="cta-button">2 timmar</button>
-                    </div>
-                </div>
-
-                <button type="submit" class="cta-button" id="green-cta-button">Bekräfta Bokning</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-    <div class="booking-content" id="Shuffleboard-content">
-        <h3>Boka Shuffleboard</h3>
-        <!-- Bokningsformulär här -->
-    </div>
-
-    <div class="booking-content" id="Dart-content">
-        <h3>Boka Dart</h3>
-        <!-- Bokningsformulär här -->
-    </div>
-</div>
+        </div>-->
 
 <!--- CONTACT BUTTON -->
 
@@ -298,7 +283,6 @@
             <button type="button" onclick="submitMessage()">Skicka</button>
         </form>
     </div>    
-
     <div class="footerbowling">
         <div class="footer-container">
             <div class="footer-section">
@@ -344,6 +328,8 @@
     <script src="../script/floatingcontact.js"></script>
     <script src="../script/sectioninfo.js"></script>
     <script src="../script/booking.js"></script>
+    <script src="../script/bookingContainer.js"></script>
+    <script src="../script/calendar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 </html>

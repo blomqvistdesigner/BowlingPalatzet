@@ -1,10 +1,18 @@
-/* bowlingmain.css */
+/* bookingmain.css */
 
-body {
-    background-color: #242424;
-    font-family: Arial, sans-serif;
+html, body {
+    height: auto;
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
 }
 
 /* Header-sektion */

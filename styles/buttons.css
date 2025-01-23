@@ -4,7 +4,7 @@
     #d36217;
     color: #fff;
     padding: 10px 10px;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
@@ -15,6 +15,56 @@
 
 .cta-button:hover {
     background-color: #ff731c;
+}
+
+.cta-button.selected, .time-button.selected {
+    background-color: #ff731c; /* Grön bakgrund */
+    color: rgb(0, 0, 0); /* Vit text */
+    border: 2px solid #000000; /* Mörkare grön ram */
+    transform: scale(1.1); /* Gör knappen något större */
+    transition: all 0.2s ease-in-out; /* Smidig animation */
+}
+
+.time-button {
+    background: linear-gradient(to bottom, rgba(253, 190, 87, 0.4), 
+    rgba(0, 0, 0, 0.2)), 
+    #d36217;    color: #fff;
+    height: 40px; /* Specificera en höjd */
+    line-height: 0px; /* Matcha höjden */
+    text-align: center; /* Centrerar horisontellt */
+    padding: 0; /* Ta bort extra padding för att säkerställa korrekt centering */
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    position: relative; /* Behövs för pseudo-elementet */
+}
+
+.time-button::after {
+    content: ''; /* Obligatoriskt för pseudo-element */
+    position: absolute;
+    bottom: 0; /* Placera längst ner */
+    left: 0%; /* Justera bredden */
+    right: 0%; /* Justera bredden */
+    height: 6px; /* Höjden på "bottom border" */
+    background-color: rgb(0, 255, 0); /* Standardfärg */
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Olika tillgänglighetsfärger */
+.time-button.available::after {
+    background-color: rgb(0, 255, 0);
+}
+
+.time-button.limited::after {
+    background-color: rgb(255, 255, 0);
+}
+
+.time-button.unavailable::after {
+    background-color: rgb(255, 0, 0);
 }
 
 .buttons-container {
@@ -38,7 +88,7 @@
     #d36217;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;

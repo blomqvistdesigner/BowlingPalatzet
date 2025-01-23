@@ -1,0 +1,78 @@
+.footerbowling {
+    background: linear-gradient(to bottom, rgb(36, 36, 36, 1), 
+    rgba(0, 0, 0, 1)), 
+    #000000;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    bottom: 0px;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Dela upp i tre sektioner */
+    align-items: flex-start; /* Justera varje sektion från toppen */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrera innehållet */
+    z-index: 2;
+    width: 90%;
+}
+
+.footer-section {
+    flex: 1; /* Låter varje sektion ta upp lika stor plats */
+    padding: 10px;
+    text-align: left;
+    z-index: 3;
+}
+
+.footer-bottom {
+    position: absolute;
+    margin-top: 10px;
+    bottom: 10px; /* 5px från botten av footer */
+    left: 50%;
+    transform: translateX(-50%); /* Centrerar den horisontellt */
+    font-size: 0.9em;
+    color: #cccccc;
+    z-index: 4;
+}
+
+.footer-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-media-container {
+    display: flex;
+    height: 50px;
+}
+
+.footer-media-container p {
+    margin-left: 6px;
+}
+
+.phone-link:hover, .location-link:hover {
+    cursor: pointer;
+}
+
+#phone-icon, #location-icon {
+    font-size: 24px;
+    margin-right: 8px;
+    color: #d36217;
+}
+
+.phone-link, .location-link {
+    display: flex;
+    align-items: center;
+    color: #d36217;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.location-link:hover {
+    cursor: pointer;
+}
