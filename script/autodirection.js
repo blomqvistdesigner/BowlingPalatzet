@@ -1,14 +1,20 @@
-document.querySelector('.bottom-button').addEventListener('click', function(event) {
-    event.preventDefault(); // Förhindra standardbeteende
-    document.querySelector('.main-container').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-
-document.querySelector('#scroll-activities').addEventListener('click', function(event) {
-    event.preventDefault(); // Förhindra standardbeteende
-    document.querySelector('.main-container').scrollIntoView({
-        behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('click', function(event) {
+        // Bara hantera aktivitetsknappen
+        if (event.target.matches('#scroll-activities')) {
+            event.preventDefault();
+            
+            // Försök först scrolla ner
+            const mainContainer = document.querySelector('.main-container');
+            if (mainContainer) {
+                mainContainer.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            } else {
+                // Om inte main-container finns, gå till aktiviteter-sidan
+                window.location.href = '../tyreso/tyreso.html';
+            }
+        }
     });
 });
 

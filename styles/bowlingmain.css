@@ -150,7 +150,7 @@ body {
 .spacer-wrapper {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,22 +190,22 @@ body {
 }
 
 /* Stora skärmar */
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     .spacer-wrapper {
         background-size: contain; /* Anpassar till behållaren på stora skärmar */
     }
     .header-spacer {
-        height: 500px;
+        height: 400px;
     }
 }
 
-@media (min-width: 1500px) {
+@media (max-width: 1500px) {
     .spacer-wrapper {
         background-size: contain; /* Anpassar till behållaren på stora skärmar */
     }
 
     .header-spacer {
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -213,6 +213,9 @@ body {
 @media (min-width: 768px) and (max-width: 1199px) {
     .spacer-wrapper {
         background-size: cover; /* Täck hela behållaren på medelstora skärmar */
+    }
+    .header-spacer {
+        height: 400px;
     }
 }
 
@@ -224,7 +227,7 @@ body {
     }
 
     .header-spacer {
-        height: 500px;
+        height: 400px;
     }
 }
 
@@ -245,7 +248,7 @@ body {
 /* Mindre skärmar */
 @media (max-width: 500px) {
     .header-spacer {
-        height: 300px;
+        height: 400px;
     }
 }
 
