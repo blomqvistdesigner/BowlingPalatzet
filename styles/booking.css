@@ -89,7 +89,7 @@
     flex-direction: column;
     flex: 0 0 auto; /* Ingen flex-grow, ingen flex-shrink, tar bara den utrymme den behöver */
     min-width: 250px;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 .laneTable {
